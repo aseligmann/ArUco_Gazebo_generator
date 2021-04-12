@@ -1,14 +1,15 @@
-gazebo_models
-==============
+# ArUco Gazebo model generator
 
-ar_tag models for gazebo
 
-script allowing to generate gazebo models for all the AR tags in the images folder.
+ArUco fiducial models for gazebo.
 
-How to use
-----------
+Contains:
+* Script allowing to generate Gazebo models for all the AR tags in the images folder.
+* Script for generating ArUco fiducial markers
 
-.. code-block:: bash
+## How to use
+
+```bash
 
     $ ./generate_markers_model.py -h
     usage: generate gazebo models for AR tags
@@ -26,23 +27,26 @@ How to use
       -w WHITE_CONTOUR_SIZE_MM, --white-contour-size-mm WHITE_CONTOUR_SIZE_MM
                             Add white contour around images, default to no contour
                             (default: 0)
+```
 
-.. code-block:: bash
+```bash
 
     ./generate_markers_model.py -i IMAGE_DIRECTORY -g GAZEBO_MODELS_DIRECTORY -s SIZE_IN_MILLIMETER -w CONTOUR_SIZE_IN_MM
+```
 
 For example the following command will generate markers of 1m side + 0.5m white contour on each side, resulting in a 2mx2m gazebo model.
 
-.. code-block:: bash
+```bash
 
     ./generate_markers_model.py -i IMAGE_DIRECTORY -s 1000 -w 500
+```
 
-Limitations
------------
-Assumes png images, dimensions 170*170px
+## Limitations
 
-blender file provided to test on other image size
+Assumes png images, dimensions 170*170px.
 
-TODO
------
+Blender file is provided to test on other image size
+
+## TODO
+
 Support other image formats
