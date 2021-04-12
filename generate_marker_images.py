@@ -6,8 +6,8 @@ import cv2.aruco as aruco
 aruco_dict = aruco.Dictionary_get(aruco.DICT_5X5_250)
 
 # Create an image from the marker
-size = 200 # 200px x 200px
+size = 170 # 170px x 170px
 for id in range(0, 250):
-	img = aruco.drawMarker(aruco_dict, id, 200)
+	img = aruco.drawMarker(aruco_dict, id, size)
 	cv2.imwrite("markers/aruco_marker_" + str(id) + ".png", img)
 
