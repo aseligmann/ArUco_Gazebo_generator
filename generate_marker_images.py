@@ -3,7 +3,7 @@ import cv2
 import cv2.aruco as aruco
 
 # Select type of aruco marker (size)
-aruco_dict = aruco.Dictionary_get(aruco.DICT_5X5_250)
+aruco_dict = aruco.Dictionary_get(aruco.DICT_ARUCO_ORIGINAL)
 
 # Create an image from the marker
 size = 170 # 170px x 170px
